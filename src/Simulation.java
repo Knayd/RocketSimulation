@@ -1,12 +1,11 @@
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 import java.io.File;
 
-public class Simulation {
+class Simulation {
 
-    public ArrayList loadItems(File file) //Gets a file as a parameter
+    ArrayList<Item> loadItems(File file) //Gets a file as a parameter
     {
 
         Scanner scanner = null;
@@ -42,7 +41,7 @@ public class Simulation {
         return itemsList;
     }
 
-    public ArrayList loadU1(ArrayList<Item> itemslist)
+    ArrayList loadU1(ArrayList<Item> itemslist)
     {
 
         ArrayList<U1> u1list = new ArrayList<>(); //This is where the rockets will be stored
@@ -71,7 +70,7 @@ public class Simulation {
         return u1list;
     }
 
-    public ArrayList loadU2(ArrayList<Item> itemslist)
+    ArrayList loadU2(ArrayList<Item> itemslist)
     {
 
         ArrayList<U2> u1list = new ArrayList<>(); //This is where the rockets will be stored
@@ -101,7 +100,7 @@ public class Simulation {
         return u1list;
     }
 
-    public double runSimulation(ArrayList<Rocket> rockets)
+    void runSimulation(ArrayList<Rocket> rockets)
     {
         double cost=0.0;
         int succes=0;
@@ -132,7 +131,8 @@ public class Simulation {
             }
         }
         System.out.println("Success: " + succes + "\nFailures: " + failures + "\nCost: " + cost);
-        return cost;
+
+
     }
 
 

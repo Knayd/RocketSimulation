@@ -16,14 +16,7 @@ public class Rocket implements SpaceShip {
     public boolean canCarry(Item item)
     {
 
-        if((item.weight+this.weight)<=this.maxweight)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return (item.weight + this.weight) <= this.maxweight;
 
 
     }
